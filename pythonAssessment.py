@@ -104,8 +104,42 @@ def count_sentences(str) :
 count_sentences(article)
 
 
+def main() :
+    while True :
+            print('News article analysis program!')
+            print('Would you like to: ')
+            print('1. Count the number of times a specific word is used')
+            print('2. Identify the most common word')
+            print('3. Calculate the average length of words.')
+            print('4. Count the number of paragraphs')
+            print('5. Counting the number of sentences in the text')
+            print('6. Exit')
+            choice = input('Enter your choice (1-6) : ')
 
-    
+            if choice == '1' :
+                word_to_count = input('Enter the word you want to count : ')
+                count_specific_word(article, word_to_count)
+
+            elif choice == '2' :
+                identify_most_common_word(article)
+
+            elif choice == '3' :
+                calculate_average_word_length(article)
+
+            elif choice == '4' :
+                count_paragraphs(article)
+
+            elif choice == '5' :
+                count_sentences(article)
+            
+            elif choice == '6' :
+                print('Leaving program...')
+            
+            
+            else :
+                print('Inalid input. Please choose between (1-5)')
+
+
     
 
 

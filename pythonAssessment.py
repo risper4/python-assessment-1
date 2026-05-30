@@ -48,24 +48,24 @@ def count_specific_word(str, word_to_count) :
     print(f'Word {word_to_count}, Occurrence : {count} ')        
         
 
-print(count_specific_word(article, 'to'))
+# print(count_specific_word(article, 'to'))
 
 
-# def identify_most_common_word(str) :
-#     article_words = str.lower().split()
-#     clean_words = [word.strip(string.punctuation) for word in article_words]
+def identify_most_common_word(str) :
+    article_words = str.lower().split()
+    clean_words = [word.strip(string.punctuation) for word in article_words]
     
-#     clean_words_dictionary = {}
-#     for word in clean_words :
-#         if word in clean_words_dictionary :
-#             clean_words_dictionary[word] += 1
-#         else :
-#             clean_words_dictionary[word] = 1
+    clean_words_dictionary = {}
+    for word in clean_words :
+        if word in clean_words_dictionary :
+            clean_words_dictionary[word] += 1
+        else :
+            clean_words_dictionary[word] = 1
 
-#     most_common = max(clean_words_dictionary, key=clean_words_dictionary.get)
-#     print(f'The most common word : {most_common}')
+    most_common = max(clean_words_dictionary, key=clean_words_dictionary.get)
+    print(f'The most common word : {most_common}')
 
-# # print(identify_most_common_word(article))
+# print(identify_most_common_word(article))
 
 
             

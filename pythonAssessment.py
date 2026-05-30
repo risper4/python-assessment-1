@@ -117,10 +117,13 @@ def main() :
         choice = input('Enter your choice (1-6) : ')
 
         if choice == '1' :
-            word_to_count = input('Enter the word you want to count : ')
-            count_specific_word(article, word_to_count)
-            break
-
+            word_to_count = str(input('Enter the word you want to count : '))
+            if not word_to_count :
+                raise ValueError('Error : Fill in the input')
+            else :
+                count_specific_word(article, word_to_count)
+                break
+            
         elif choice == '2' :
             identify_most_common_word(article)
             break

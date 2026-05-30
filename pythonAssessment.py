@@ -1,4 +1,5 @@
 import string
+import re
 article = '''
     ACME Inc. Unveils Revolutionary Apple Pie Machine, Transforming Baking with Automation
 
@@ -85,14 +86,25 @@ def calculate_average_word_length(str) :
 
 def count_paragraphs(str) :
     article_paragraphs = str.split('\n\n')
-    paragraph_number = 0
+    paragraph_number = int(0)
 
     for paragraph in article_paragraphs :
         paragraph_number += 1
 
     print(f'Number of paragraphs : {paragraph_number}')
 
-count_paragraphs(article)
+# count_paragraphs(article)
+
+def count_sentences(str) :
+    article_sentences = re.split(r'(?<=[.!?])\s+', str.strip())
+    sentence_num = len(article_sentences)
+
+    print(f'Number of sentences : {sentence_num}')
+
+count_sentences(article)
+
+
+
     
     
 

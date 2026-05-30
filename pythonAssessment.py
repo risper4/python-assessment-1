@@ -49,7 +49,7 @@ def count_specific_word(str, word_to_count) :
         
 
 # print(count_specific_word(article, 'to'))
-
+ 
 
 def identify_most_common_word(str) :
     article_words = str.lower().split()
@@ -66,6 +66,24 @@ def identify_most_common_word(str) :
     print(f'The most common word : {most_common}')
 
 # print(identify_most_common_word(article))
+
+def calculate_average_word_length(str) :
+    article_words = str.lower().split()
+    clean_words = [(word.strip(string.punctuation)) for word in article_words]
+
+    num_clean_words = len(clean_words)
+    total_word_length = 0
+
+    for word in clean_words :
+        each_word_length = len(word)
+        total_word_length += each_word_length
+
+    average_word_length = float(total_word_length / num_clean_words)
+    print(f'The average word length of the article : {average_word_length:.4f}')
+
+calculate_average_word_length(article)
+
+    
 
 
             

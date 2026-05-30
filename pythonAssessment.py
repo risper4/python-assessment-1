@@ -81,7 +81,23 @@ def calculate_average_word_length(str) :
     average_word_length = float(total_word_length / num_clean_words)
     print(f'The average word length of the article : {average_word_length:.4f}')
 
-calculate_average_word_length(article)
+# calculate_average_word_length(article)
+
+def count_paragraphs(str) :
+    article_paragraphs = str.split('\n\n')
+    paragraph_number = 0
+
+    for paragraph in article_paragraphs :
+        paragraph_number += 1
+
+    print(f'Number of paragraphs : {paragraph_number}')
+
+count_paragraphs(article)
+    
+    
+
+
+
 
     
 

@@ -46,7 +46,7 @@ def count_specific_word(str, word_to_count) :
         if word_to_count == word :
             count += 1
 
-    print(f'Word {word_to_count}, Occurrence : {count} ')        
+    print(f'{count} ')        
         
 
 # print(count_specific_word(article, 'to'))
@@ -64,7 +64,7 @@ def identify_most_common_word(str) :
             clean_words_dictionary[word] = 1
 
     most_common = max(clean_words_dictionary, key=clean_words_dictionary.get)
-    print(f'The most common word : {most_common}')
+    print(f'{most_common}')
 
 # print(identify_most_common_word(article))
 
@@ -80,7 +80,7 @@ def calculate_average_word_length(str) :
         total_word_length += each_word_length
 
     average_word_length = float(total_word_length / num_clean_words)
-    print(f'The average word length of the article : {average_word_length:.4f}')
+    print(f'{average_word_length:.2f}')
 
 # calculate_average_word_length(article)
 
@@ -91,7 +91,7 @@ def count_paragraphs(str) :
     for paragraph in article_paragraphs :
         paragraph_number += 1
 
-    print(f'Number of paragraphs : {paragraph_number}')
+    print(f'{paragraph_number}')
 
 # count_paragraphs(article)
 
@@ -99,7 +99,7 @@ def count_sentences(str) :
     article_sentences = re.split(r'(?<=[.!?])\s+', str.strip())
     sentence_num = len(article_sentences)
 
-    print(f'Number of sentences : {sentence_num}')
+    print(f'{sentence_num}')
 
 count_sentences(article)
 

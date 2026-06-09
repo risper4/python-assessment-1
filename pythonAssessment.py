@@ -41,12 +41,13 @@ The Apple Pie Master from ACME Inc. represents a significant advancement in the 
 '''
 
 def count_specific_word(str, word_to_count) :
+    split_words = str.split()
+    clean_words = [re.sub(r'[."\']', '', word) for word in split_words]
     count = 0
-    for word in str.split():
-        if word_to_count == word :
+    for word in clean_words:
+        if word_to_count.lower() == word.lower() :
             count += 1
-
-    print(f'{count} ')        
+    print(f'{count}')        
         
 
 # print(count_specific_word(article, 'to'))
@@ -101,7 +102,7 @@ def count_sentences(str) :
 
     print(f'{sentence_num}')
 
-count_sentences(article)
+# count_sentences(article)
 
 
 def main() :

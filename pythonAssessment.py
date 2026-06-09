@@ -80,8 +80,11 @@ def calculate_average_word_length(str) :
         each_word_length = len(word)
         total_word_length += each_word_length
 
-    average_word_length = float(total_word_length / num_clean_words)
-    print(f'{average_word_length:.2f}')
+    if num_clean_words == 0:
+        return 0.0
+    else :
+        average_word_length = float(total_word_length / num_clean_words)
+        print(f'{average_word_length:.2f}')
 
 # calculate_average_word_length(article)
 
